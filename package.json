@@ -4,7 +4,8 @@
   "description": "在漢字下方標注羅馬拼音 Edit",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel src --out-dir lib",
+    "build": "npm run clear && babel src --out-dir lib",
+    "clear": "rm -rf lib/*;mkdir -p lib",
     "deploy": "npm run build && npm publish",
     "test": "NODE_ENV=test mocha --compilers js:babel-register,css:css-dnt-compiler --recursive"
   },

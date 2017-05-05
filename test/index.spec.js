@@ -1,18 +1,18 @@
 import React from "react";
 import { expect } from "chai";
 import { shallow } from "enzyme";
-import 漢羅詞 from "../lib";
+import { RubyHanLo } from "../lib";
 
 const setup = ({ 漢字詞 = "", 臺羅閏號調 = "" }) => {
   const component = shallow(
-    <漢羅詞 漢字詞={漢字詞}
+    <RubyHanLo 漢字詞={漢字詞}
       臺羅閏號調={臺羅閏號調}/>,
     );
   return component.children().map(node => node.text());
 };
 
 describe("Component", () => {
-  describe("漢羅詞", () => {
+  describe("RubyHanLo", () => {
     it("should render 一組漢羅詞", () => {
       const html = setup({
         臺羅閏號調: "Ta̍k-ke",
