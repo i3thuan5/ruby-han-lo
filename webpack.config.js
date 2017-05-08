@@ -28,11 +28,7 @@ module.exports = {
         rules: [
            {
               test: /\.jsx?$/,
-              use: ['babel-loader', 'strict-loader'],
-              include: [
-                path.join(__dirname, 'demo'),
-                path.join(__dirname, 'src'),
-              ],
+              use: ['babel-loader', 'strict-loader']
             },
            {
               test: /\.css$/,

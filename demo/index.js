@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
-import App from './app';
+import { RubyHanLo } from '../src';
 
 render(
-  <App/>,
+  <RubyHanLo 臺羅閏號調="媠" 漢字詞="sui2"/>,
   document.getElementById('app')
 );
